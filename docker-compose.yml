@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=db-tienda
+      - POSTGRES_USER=adminInfo
+      - POSTGRES_PASSWORD=admin1234
+    ports:
+      - 5435:5432
+    volumes:
+      - ./db_postgres:/var/lib/postgresql/data
+
+
